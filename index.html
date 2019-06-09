@@ -2,18 +2,57 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>STL Copier</title>
+    <link rel="stylesheet"
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet"
+        href="./node_modules/bulma/css/bulma.min.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
+    <!-- <div class="preload"></div> -->
+    <section class="section">
+    <figure class="image is-128x128 logo">
+      <img src="sky.png">
+    </figure>
+			<div class="container">
+				<h1 class="title has-text-centered">
+					Content Services
+				</h1>
+			</div>
+    </section>
+    <div class="buttons is-centered">
+        <a id='openButton' class="button is-info is-rounded">Load CSV</a>
+    </div>
+      <nav class="level is-invisible" id="read-csv-status-container">
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Number of STLs in CSV to Copy</p>
+        <p class="title" id="number-of-programmes"></p>
+      </div>
+    </div>
+      </nav>
+      <div class="buttons is-centered">
+        <a id="copyButton" class="button is-success is-invisible is-rounded">Copy STLs</a>
+      </div>
+      <div id="status" class="is-invisible">
+      <div class="columns">
+        <div class="column is-half">
+            <p class="heading">STLs Copied</p>
+            <p class="title" id="successWindow">-</p>
+            <div id="success-tags" class="tags padded-tags">
+            </div>
+        </div>
+        <div class="column is-half">
+            <p class="heading">Errors</p>
+            <p class="title" id="errorsWindow">-</p>
+            <div id="error-tags" class="field is-grouped is-grouped-multiline padded-tags">
+            </div>
+        </div>
+      </div>
+    </div>
     <script>
-      // You can also require other files to run in this process
       require('./renderer.js')
+      require('./copier.js')
     </script>
   </body>
 </html>

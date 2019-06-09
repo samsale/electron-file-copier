@@ -1,0 +1,28 @@
+.preload {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 1000;
+}
+
+.tag-container{
+  display: flex;
+  justify-content: center;
+}
+
+#status {
+  text-align: center;
+}
+
+.padded-tags {
+  padding: 1rem;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
