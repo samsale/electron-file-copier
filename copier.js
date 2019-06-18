@@ -1,5 +1,7 @@
 
 //A - Validate and parse on frontend. Then send object to backend via IPC-Main
+//Create local storage or file for src and destination stls folder
+//Nprogress.js
 
 
 const fs = require('fs')
